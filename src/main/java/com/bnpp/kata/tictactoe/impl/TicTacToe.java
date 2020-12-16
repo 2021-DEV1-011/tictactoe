@@ -1,6 +1,7 @@
 package com.bnpp.kata.tictactoe.impl;
 
 import com.bnpp.kata.tictactoe.exception.InvalidInputException;
+import com.bnpp.kata.tictactoe.exception.PositionAlreadyOccupiedException;
 import com.bnpp.kata.tictactoe.util.GameUtility;
 
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class TicTacToe {
         board = new GameBoard();
     }
 
-    void play() throws InvalidInputException {
+    void play() throws InvalidInputException, PositionAlreadyOccupiedException {
         logger.info(board.showBoard());
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -28,6 +29,9 @@ public class TicTacToe {
             String inputPosition = scanner.next().trim();
             if (!GameUtility.isValidInput(inputPosition)) {
                 throw new InvalidInputException(INVALID_POSITION_MESSAGE);
+            }
+            if (GameUtility.isPositionOccupied(board.getMovesPlayed(), inputPosition)) {
+                throw new PositionAlreadyOccupiedException("Position is already occupied");
             }
             board.placeInputPositionAtBoardGrid(inputPosition);
             logger.info(board.showBoard());

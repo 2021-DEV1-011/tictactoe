@@ -77,4 +77,8 @@ public class GameBoard {
     public String getCurrentPlayer() {
         return currentPlayer;
     }
+
+    public List<String> getMovesPlayed() {
+        return movesPlayed;
+    }
 }

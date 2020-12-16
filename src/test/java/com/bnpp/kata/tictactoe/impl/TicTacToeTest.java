@@ -1,6 +1,7 @@
 package com.bnpp.kata.tictactoe.impl;
 
 import com.bnpp.kata.tictactoe.exception.InvalidInputException;
+import com.bnpp.kata.tictactoe.exception.PositionAlreadyOccupiedException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -33,6 +34,18 @@ class TicTacToeTest {
         } catch (Exception exception) {
             assertSame(InvalidInputException.class,exception.getClass());
             assertSame("Position entered is not valid",exception.getMessage());
+        }
+    }
+
+    @Test
+    @DisplayName("Should throw PositionAlreadyOccupiedException if input position is already played")
+    public void throwPositionOccupiedExceptionWhilePlaying() {
+        System.setIn(new ByteArrayInputStream("1\n2\n1".getBytes()));
+        try {
+            ticTacToe.play();
+        } catch (Exception exception) {
+            assertSame(PositionAlreadyOccupiedException.class,exception.getClass());
+            assertSame("Position is already occupied",exception.getMessage());
         }
     }
 }
