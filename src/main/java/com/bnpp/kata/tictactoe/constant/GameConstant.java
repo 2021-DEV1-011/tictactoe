@@ -21,7 +21,12 @@ public class GameConstant {
     public static final String POSITION_ONE = "1";
     public static final String POSITION_TWO = "2";
     public static final String POSITION_THREE = "3";
-
+    public static final String POSITION_FOUR = "4";
+    public static final String POSITION_FIVE = "5";
+    public static final String POSITION_SIX = "6";
+    public static final String POSITION_SEVEN = "7";
+    public static final String POSITION_EIGHT = "8";
+    public static final String POSITION_NINE = "9";
 
 
 }

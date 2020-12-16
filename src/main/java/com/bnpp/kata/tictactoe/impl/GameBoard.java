@@ -49,22 +49,22 @@ public class GameBoard {
             case POSITION_THREE:
                 grid[INDEX_ZERO][INDEX_TWO] = currentPlayer;
                 break;
-            case "4":
+            case POSITION_FOUR:
                 grid[INDEX_ONE][INDEX_ZERO] = currentPlayer;
                 break;
-            case "5":
+            case POSITION_FIVE:
                 grid[INDEX_ONE][INDEX_ONE] = currentPlayer;
                 break;
-            case "6":
+            case POSITION_SIX:
                 grid[INDEX_ONE][INDEX_TWO] = currentPlayer;
                 break;
-            case "7":
+            case POSITION_SEVEN:
                 grid[INDEX_TWO][INDEX_ZERO] = currentPlayer;
                 break;
-            case "8":
+            case POSITION_EIGHT:
                 grid[INDEX_TWO][INDEX_ONE] = currentPlayer;
                 break;
-            case "9":
+            case POSITION_NINE:
                 grid[INDEX_TWO][INDEX_TWO] = currentPlayer;
                 break;
         }
