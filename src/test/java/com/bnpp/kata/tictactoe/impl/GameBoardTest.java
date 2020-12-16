@@ -79,4 +79,11 @@ class GameBoardTest {
         assertEquals("X",board.getGrid()[0][0]);
     }
 
+    @Test
+    @DisplayName("Should place & track player at second position on the board grid")
+    void placeSecondPositionOnBoard() {
+        board.placeInputPositionAtBoardGrid("2");
+        assertEquals("X",board.getGrid()[0][1]);
+    }
+
 }
