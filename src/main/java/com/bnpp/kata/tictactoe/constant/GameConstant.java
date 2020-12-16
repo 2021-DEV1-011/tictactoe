@@ -20,6 +20,7 @@ public class GameConstant {
 
     public static final String POSITION_ONE = "1";
     public static final String POSITION_TWO = "2";
+    public static final String POSITION_THREE = "3";
 
 
 

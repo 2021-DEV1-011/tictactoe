@@ -44,7 +44,7 @@ public class GameBoard {
         } else if ( POSITION_TWO.equals(inputPosition) ) {
             movesPlayed.add(inputPosition);
             grid[INDEX_ZERO][INDEX_ONE] = currentPlayer;
-        } else if ( "3".equals(inputPosition) ) {
+        } else if ( POSITION_THREE.equals(inputPosition) ) {
             movesPlayed.add(inputPosition);
             grid[INDEX_ZERO][INDEX_TWO] = currentPlayer;
         }
