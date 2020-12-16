@@ -5,6 +5,9 @@ import com.bnpp.kata.tictactoe.util.GameUtility;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+import static com.bnpp.kata.tictactoe.constant.GameConstant.INPUT_MESSAGE;
+import static com.bnpp.kata.tictactoe.constant.GameConstant.INVALID_POSITION_MESSAGE;
+
 public class TicTacToe {
     private static final Logger logger = Logger.getLogger(TicTacToe.class.getName());
 
@@ -20,10 +23,10 @@ public class TicTacToe {
         logger.info(board.showBoard());
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            logger.info("Enter the position(1-9) for " + board.getCurrentPlayer());
+            logger.info(INPUT_MESSAGE + board.getCurrentPlayer());
             String inputPosition = scanner.next().trim();
             if (!GameUtility.isValidInput(inputPosition)) {
-                throw new Exception("position entered is not valid");
+                throw new Exception(INVALID_POSITION_MESSAGE);
             }
             board.placeInputPositionAtBoardGrid(inputPosition);
             logger.info(board.showBoard());

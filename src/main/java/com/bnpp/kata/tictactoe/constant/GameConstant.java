@@ -28,5 +28,7 @@ public class GameConstant {
     public static final String POSITION_EIGHT = "8";
     public static final String POSITION_NINE = "9";
 
+    public static final String INPUT_MESSAGE = "Enter the position(1-9) for ";
+    public static final String INVALID_POSITION_MESSAGE = "Position entered is not valid";
 
 }

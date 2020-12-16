@@ -25,7 +25,7 @@ class TicTacToeTest {
         try {
             game.play();
         } catch (Exception exception) {
-            assertSame("position entered is not valid",exception.getMessage());
+            assertSame("Position entered is not valid",exception.getMessage());
         }
     }
 }
