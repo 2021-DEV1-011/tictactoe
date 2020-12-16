@@ -11,6 +11,18 @@ public class GameUtility {
             result = true;
         else if ( POSITION_THREE.equals(input) )
             result = true;
+        else if ( POSITION_FOUR.equals(input) )
+            result = true;
+        else if ( POSITION_FIVE.equals(input) )
+            result = true;
+        else if ( POSITION_SIX.equals(input) )
+            result = true;
+        else if ( POSITION_SEVEN.equals(input) )
+            result = true;
+        else if ( POSITION_EIGHT.equals(input) )
+            result = true;
+        else if ( POSITION_NINE.equals(input) )
+            result = true;
         return result;
     }
 }
