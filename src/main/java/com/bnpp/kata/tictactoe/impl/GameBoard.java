@@ -9,7 +9,7 @@ public class GameBoard {
         grid = new String[ROW_SIZE][COLUMN_SIZE];
         grid[INDEX_ZERO][INDEX_ZERO] = BLANK_VALUE;
         grid[INDEX_ZERO][INDEX_ONE] = BLANK_VALUE;
-        grid[INDEX_ZERO][2] = BLANK_VALUE;
+        grid[INDEX_ZERO][INDEX_TWO] = BLANK_VALUE;
     }
 
     public String[][] getGrid() {
