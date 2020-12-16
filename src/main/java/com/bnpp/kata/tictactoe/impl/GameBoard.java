@@ -7,9 +7,11 @@ public class GameBoard {
 
     public GameBoard() {
         grid = new String[ROW_SIZE][COLUMN_SIZE];
-        grid[INDEX_ZERO][INDEX_ZERO] = BLANK_VALUE;
-        grid[INDEX_ZERO][INDEX_ONE] = BLANK_VALUE;
-        grid[INDEX_ZERO][INDEX_TWO] = BLANK_VALUE;
+        for (int row = INDEX_ZERO; row < ROW_SIZE; row++) {
+            for (int column = INDEX_ZERO; column < COLUMN_SIZE; column++) {
+                grid[row][column] = BLANK_VALUE;
+            }
+        }
     }
 
     public String[][] getGrid() {
