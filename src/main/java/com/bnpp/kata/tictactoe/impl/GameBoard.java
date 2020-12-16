@@ -15,16 +15,16 @@ public class GameBoard {
     }
 
     String showBoard() {
-        String boardValue = "\n";
+        String boardValue = NEWLINE_VALUE;
         for (int row = INDEX_ZERO; row < ROW_SIZE; row++) {
-            String rowValue = "";
+            String rowValue = EMPTY_STRING;
             for (int column = INDEX_ZERO; column < COLUMN_SIZE; column++) {
                 if ( column != INDEX_TWO )
-                    rowValue += grid[row][column] + " | " ;
+                    rowValue += grid[row][column] + PIPE_VALUE ;
                 else
                     rowValue += grid[row][column] ;
             }
-            boardValue += rowValue + "\n";
+            boardValue += rowValue + NEWLINE_VALUE;
         }
         return boardValue;
     }

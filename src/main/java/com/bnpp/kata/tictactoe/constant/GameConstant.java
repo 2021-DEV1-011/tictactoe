@@ -12,5 +12,10 @@ public class GameConstant {
     public static final int INDEX_TWO = NUMBER_TWO;
 
     public static final String BLANK_VALUE = "_";
+    public static final String NEWLINE_VALUE = "\n";
+    public static final String EMPTY_STRING = "";
+    public static final String PIPE_VALUE = " | ";
+
+
 
 }
