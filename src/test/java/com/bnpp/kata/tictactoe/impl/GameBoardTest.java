@@ -62,4 +62,14 @@ class GameBoardTest {
         assertEquals("O", board.getCurrentPlayer());
     }
 
+    @Test
+    @DisplayName("Should switch player of the game accordingly")
+    void switchPlayer() {
+        assertEquals("X", board.getCurrentPlayer());
+        board.switchPlayer();
+        assertEquals("O", board.getCurrentPlayer());
+        board.switchPlayer();
+        assertEquals("X", board.getCurrentPlayer());
+    }
+
 }

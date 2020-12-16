@@ -31,6 +31,8 @@ public class GameBoard {
     void switchPlayer() {
         if (PLAYER_X.equals(currentPlayer)) {
             currentPlayer = PLAYER_O;
+        } else {
+            currentPlayer = PLAYER_X;
         }
     }
 
