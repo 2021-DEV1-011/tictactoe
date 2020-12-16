@@ -12,4 +12,10 @@ class GameUtilityTest {
     void isPositionOneValidInput() {
         assertTrue(GameUtility.isValidInput("1"));
     }
+
+    @Test
+    @DisplayName("Should take position two as a valid input")
+    void isPositionTwoValidInput() {
+        assertTrue(GameUtility.isValidInput("2"));
+    }
 }

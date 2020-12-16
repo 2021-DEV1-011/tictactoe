@@ -7,6 +7,8 @@ public class GameUtility {
         boolean result = false;
         if ( POSITION_ONE.equals(input) )
             result = true;
+        else if ( POSITION_TWO.equals(input) )
+            result = true;
         return result;
     }
 }
