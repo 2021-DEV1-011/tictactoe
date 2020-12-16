@@ -13,4 +13,14 @@ public class GameUtility {
     static boolean isPositionOccupied(List<String> movesPlayed, String position){
         return movesPlayed.contains(position);
     }
+
+    static String checkWinner(String [][] grid) {
+        String winner = null;
+        if (grid[INDEX_ZERO][INDEX_ZERO].equals(grid[INDEX_ZERO][INDEX_ONE]) && grid[INDEX_ZERO][INDEX_ZERO].equals(grid[INDEX_ZERO][INDEX_TWO])) {
+            winner = grid[INDEX_ZERO][INDEX_ZERO];
+        }
+        if ( BLANK_VALUE.equals(winner) )
+            winner = null;
+        return winner;
+    }
 }

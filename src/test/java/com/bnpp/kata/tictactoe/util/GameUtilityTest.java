@@ -1,5 +1,6 @@
 package com.bnpp.kata.tictactoe.util;
 
+import com.bnpp.kata.tictactoe.impl.GameBoard;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -28,5 +29,16 @@ class GameUtilityTest {
         movesPlayed.add("2");
         assertTrue(GameUtility.isPositionOccupied(movesPlayed,"1"));
         assertFalse(GameUtility.isPositionOccupied(movesPlayed,"3"));
+    }
+
+    @Test
+    @DisplayName("Should declare winner if the 1st row of the board is played by same player")
+    void firstRowWinner() {
+        GameBoard board = new GameBoard();
+        assertNull(GameUtility.checkWinner(board.getGrid()));
+        board.placeInputPositionAtBoardGrid("1");
+        board.placeInputPositionAtBoardGrid("2");
+        board.placeInputPositionAtBoardGrid("3");
+        assertEquals("X", GameUtility.checkWinner(board.getGrid()));
     }
 }

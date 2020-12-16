@@ -37,7 +37,7 @@ public class GameBoard {
         currentPlayer = PLAYER_X.equals(currentPlayer) ? PLAYER_O : PLAYER_X;
     }
 
-    void placeInputPositionAtBoardGrid(String inputPosition) {
+    public void placeInputPositionAtBoardGrid(String inputPosition) {
         movesPlayed.add(inputPosition);
         switch (inputPosition) {
             case POSITION_ONE:
