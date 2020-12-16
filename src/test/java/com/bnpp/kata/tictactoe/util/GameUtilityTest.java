@@ -79,4 +79,14 @@ class GameUtilityTest {
         assertEquals("X", GameUtility.checkWinner(board.getGrid()));
     }
 
+    @Test
+    @DisplayName("Should declare winner if the diagonal of the board is played by same player")
+    void rightDiagonalWinner() {
+        GameBoard board = new GameBoard();
+        assertNull(GameUtility.checkWinner(board.getGrid()));
+        board.placeInputPositionAtBoardGrid("3");
+        board.placeInputPositionAtBoardGrid("5");
+        board.placeInputPositionAtBoardGrid("7");
+        assertEquals("X", GameUtility.checkWinner(board.getGrid()));
+    }
 }
