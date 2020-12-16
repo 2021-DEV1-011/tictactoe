@@ -5,6 +5,7 @@ public class GameConstant {
     public static final int NUMBER_ONE = 1 ;
     public static final int NUMBER_TWO = 2 ;
     public static final int NUMBER_THREE = 3 ;
+    public static final int NUMBER_FOUR = 4;
     public static final int ROW_SIZE = NUMBER_THREE;
     public static final int COLUMN_SIZE = NUMBER_THREE;
     public static final int INDEX_ZERO = NUMBER_ZERO;
@@ -31,5 +32,6 @@ public class GameConstant {
     public static final String INPUT_MESSAGE = "Enter the position(1-9) for ";
     public static final String INVALID_POSITION_MESSAGE = "Position entered is not valid";
     public static final String POSITION_OCCUPIED_MESSAGE = "Position is already occupied";
+    public static final String WINNER_MESSAGE = " player Wins!!!";
 
 }

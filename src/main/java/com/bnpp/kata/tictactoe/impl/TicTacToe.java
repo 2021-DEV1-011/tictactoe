@@ -35,10 +35,10 @@ public class TicTacToe {
             board.placeInputPositionAtBoardGrid(inputPosition);
             logger.info(board.showBoard());
             board.switchPlayer();
-            if (board.getMovesPlayed().size() > 4) {
+            if (board.getMovesPlayed().size() > NUMBER_FOUR) {
                 winner = GameUtility.checkWinner(board.getGrid());
                 if (winner != null) {
-                    logger.info(winner + " player Wins!!!");
+                    logger.info(winner + WINNER_MESSAGE);
                     break;
                 }
             }
