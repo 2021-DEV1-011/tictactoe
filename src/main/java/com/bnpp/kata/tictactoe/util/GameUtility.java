@@ -9,6 +9,8 @@ public class GameUtility {
             result = true;
         else if ( POSITION_TWO.equals(input) )
             result = true;
+        else if ( POSITION_THREE.equals(input) )
+            result = true;
         return result;
     }
 }

@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class GameUtilityTest {
 
     @ParameterizedTest
-    @ValueSource(strings = {"1","2"})
-    @DisplayName("Should take position one, two as a valid input")
+    @ValueSource(strings = {"1","2","3"})
+    @DisplayName("Should take position one, two, three as a valid input")
     void isValidInput(String position) {
         assertTrue(GameUtility.isValidInput(position));
     }
