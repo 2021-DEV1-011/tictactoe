@@ -15,13 +15,14 @@ class GameBoardTest {
     static Stream<Arguments> gridInput() {
         return Stream.of(
                 arguments(0, 0),
-                arguments(0, 1)
+                arguments(0, 1),
+                arguments(0, 2)
         );
     }
 
     @ParameterizedTest
     @MethodSource("gridInput")
-    @DisplayName("Should initialise first & second board position with blank value")
+    @DisplayName("Should initialise first, second & third board position with blank value")
     void positionDefaultValue(int rowIndex, int columnIndex) {
         GameBoard board = new GameBoard();
         assertEquals("_",board.getGrid()[rowIndex][columnIndex]);
