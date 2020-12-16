@@ -1,5 +1,6 @@
 package com.bnpp.kata.tictactoe.impl;
 
+import com.bnpp.kata.tictactoe.exception.GameOverException;
 import com.bnpp.kata.tictactoe.exception.InvalidInputException;
 import com.bnpp.kata.tictactoe.exception.PositionAlreadyOccupiedException;
 import com.bnpp.kata.tictactoe.util.GameUtility;
@@ -20,7 +21,7 @@ public class TicTacToe {
         board = new GameBoard();
     }
 
-    void play() throws InvalidInputException, PositionAlreadyOccupiedException {
+    void play() throws InvalidInputException, PositionAlreadyOccupiedException, GameOverException {
         logger.info(board.showBoard());
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -41,6 +42,9 @@ public class TicTacToe {
                     logger.info(winner + WINNER_MESSAGE);
                     break;
                 }
+            }
+            if (board.getMovesPlayed().size() > 8) {
+                throw new GameOverException("It's a DRAW!!! All the moves have been exhausted");
             }
         }
     }

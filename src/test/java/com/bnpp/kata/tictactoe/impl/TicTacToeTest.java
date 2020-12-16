@@ -1,5 +1,6 @@
 package com.bnpp.kata.tictactoe.impl;
 
+import com.bnpp.kata.tictactoe.exception.GameOverException;
 import com.bnpp.kata.tictactoe.exception.InvalidInputException;
 import com.bnpp.kata.tictactoe.exception.PositionAlreadyOccupiedException;
 import org.junit.jupiter.api.BeforeEach;
@@ -55,5 +56,17 @@ class TicTacToeTest {
         System.setIn(new ByteArrayInputStream(("1\n2\n5\n4\n9").getBytes()));
         ticTacToe.play();
         assertEquals("X", ticTacToe.getWinner());
+    }
+
+    @Test
+    @DisplayName("Should throw GameOverException if all input position are played without any winning condition being met")
+    public void throwGameOverExceptionWhilePlaying() {
+        System.setIn(new ByteArrayInputStream(("1\n2\n3\n4\n5\n7\n6\n9\n8".getBytes())));
+        try {
+            ticTacToe.play();
+        }
+        catch (Exception exception){
+            assertSame(GameOverException.class, exception.getClass());
+        }
     }
 }
