@@ -6,6 +6,7 @@ public class GameConstant {
     public static final int NUMBER_TWO = 2 ;
     public static final int NUMBER_THREE = 3 ;
     public static final int NUMBER_FOUR = 4;
+    public static final int NUMBER_EIGHT = 8 ;
     public static final int ROW_SIZE = NUMBER_THREE;
     public static final int COLUMN_SIZE = NUMBER_THREE;
     public static final int INDEX_ZERO = NUMBER_ZERO;
@@ -33,5 +34,6 @@ public class GameConstant {
     public static final String INVALID_POSITION_MESSAGE = "Position entered is not valid";
     public static final String POSITION_OCCUPIED_MESSAGE = "Position is already occupied";
     public static final String WINNER_MESSAGE = " player Wins!!!";
+    public static final String GAME_OVER_MESSAGE = "It's a DRAW!!! All the moves have been exhausted";
 
 }

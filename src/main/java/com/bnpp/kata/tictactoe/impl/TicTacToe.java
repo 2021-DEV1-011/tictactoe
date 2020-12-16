@@ -43,8 +43,8 @@ public class TicTacToe {
                     break;
                 }
             }
-            if (board.getMovesPlayed().size() > 8) {
-                throw new GameOverException("It's a DRAW!!! All the moves have been exhausted");
+            if (board.getMovesPlayed().size() > NUMBER_EIGHT) {
+                throw new GameOverException(GAME_OVER_MESSAGE);
             }
         }
     }
