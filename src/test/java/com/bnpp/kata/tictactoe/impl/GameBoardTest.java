@@ -1,24 +1,29 @@
 package com.bnpp.kata.tictactoe.impl;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class GameBoardTest {
 
-    @Test
-    @DisplayName("Should initialise first board position with blank value")
-    void firstPositionDefault() {
-        GameBoard board = new GameBoard();
-        assertEquals("_",board.getGrid()[0][0]);
+    static Stream<Arguments> gridInput() {
+        return Stream.of(
+                arguments(0, 0),
+                arguments(0, 1)
+        );
     }
 
-    @Test
-    @DisplayName("Should initialise second board position with blank value")
-    void secondPositionDefault() {
+    @ParameterizedTest
+    @MethodSource("gridInput")
+    @DisplayName("Should initialise first & second board position with blank value")
+    void positionDefaultValue(int rowIndex, int columnIndex) {
         GameBoard board = new GameBoard();
-        assertEquals("_",board.getGrid()[0][1]);
+        assertEquals("_",board.getGrid()[rowIndex][columnIndex]);
     }
-
 }
