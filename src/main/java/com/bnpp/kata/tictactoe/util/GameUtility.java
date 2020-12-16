@@ -6,7 +6,7 @@ import java.util.List;
 import static com.bnpp.kata.tictactoe.constant.GameConstant.*;
 
 public class GameUtility {
-    static boolean isValidInput(String input) {
+    public static boolean isValidInput(String input) {
         return Arrays.asList(new String[]{POSITION_ONE, POSITION_TWO, POSITION_THREE, POSITION_FOUR, POSITION_FIVE, POSITION_SIX, POSITION_SEVEN, POSITION_EIGHT, POSITION_NINE}).contains(input);
     }
 
