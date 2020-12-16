@@ -29,11 +29,7 @@ public class GameBoard {
     }
 
     void switchPlayer() {
-        if (PLAYER_X.equals(currentPlayer)) {
-            currentPlayer = PLAYER_O;
-        } else {
-            currentPlayer = PLAYER_X;
-        }
+        currentPlayer = PLAYER_X.equals(currentPlayer) ? PLAYER_O : PLAYER_X;
     }
 
     public String[][] getGrid() {
