@@ -1,5 +1,6 @@
 package com.bnpp.kata.tictactoe.impl;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,6 +13,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class GameBoardTest {
+    GameBoard board;
+
+    @BeforeEach
+    public void initialSetup() {
+        board = new GameBoard();
+    }
 
     static Stream<Arguments> gridInput() {
         return Stream.of(
@@ -31,14 +38,12 @@ class GameBoardTest {
     @MethodSource("gridInput")
     @DisplayName("Should initialise all position with blank value")
     void positionDefaultValue(int rowIndex, int columnIndex) {
-        GameBoard board = new GameBoard();
         assertEquals("_",board.getGrid()[rowIndex][columnIndex]);
     }
 
     @Test
     @DisplayName("Should display plain board structure")
     void showBoard() {
-        GameBoard board = new GameBoard();
         String structure = "\n_ | _ | _\n_ | _ | _\n_ | _ | _\n";
         assertEquals(structure,board.showBoard());
     }
