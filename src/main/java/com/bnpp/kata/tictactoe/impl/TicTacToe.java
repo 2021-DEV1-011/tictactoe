@@ -21,7 +21,7 @@ public class TicTacToe {
         board = new GameBoard();
     }
 
-    void play() throws InvalidInputException, PositionAlreadyOccupiedException, GameOverException {
+    public void play() throws InvalidInputException, PositionAlreadyOccupiedException, GameOverException {
         logger.info(board.showBoard());
         Scanner scanner = new Scanner(System.in);
         while (true) {
