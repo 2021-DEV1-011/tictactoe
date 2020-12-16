@@ -19,6 +19,7 @@ public class GameConstant {
     public static final String PLAYER_O = "O";
 
     public static final String POSITION_ONE = "1";
+    public static final String POSITION_TWO = "2";
 
 
 
