@@ -1,5 +1,6 @@
 package com.bnpp.kata.tictactoe.impl;
 
+import com.bnpp.kata.tictactoe.exception.InvalidInputException;
 import com.bnpp.kata.tictactoe.util.GameUtility;
 
 import java.util.Scanner;
@@ -19,14 +20,14 @@ public class TicTacToe {
         board = new GameBoard();
     }
 
-    void play() throws Exception {
+    void play() throws InvalidInputException {
         logger.info(board.showBoard());
         Scanner scanner = new Scanner(System.in);
         while (true) {
             logger.info(INPUT_MESSAGE + board.getCurrentPlayer());
             String inputPosition = scanner.next().trim();
             if (!GameUtility.isValidInput(inputPosition)) {
-                throw new Exception(INVALID_POSITION_MESSAGE);
+                throw new InvalidInputException(INVALID_POSITION_MESSAGE);
             }
             board.placeInputPositionAtBoardGrid(inputPosition);
             logger.info(board.showBoard());
