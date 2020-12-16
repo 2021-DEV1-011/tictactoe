@@ -13,7 +13,7 @@ public class GameBoard {
                 grid[row][column] = BLANK_VALUE;
             }
         }
-        currentPlayer = "X";
+        currentPlayer = PLAYER_X;
     }
 
     String showBoard() {
