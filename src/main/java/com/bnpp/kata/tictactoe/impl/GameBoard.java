@@ -1,10 +1,14 @@
 package com.bnpp.kata.tictactoe.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.bnpp.kata.tictactoe.constant.GameConstant.*;
 
 public class GameBoard {
     private String[][] grid;
     private String currentPlayer;
+    private List<String> movesPlayed;
 
     public GameBoard() {
         grid = new String[ROW_SIZE][COLUMN_SIZE];
@@ -14,6 +18,7 @@ public class GameBoard {
             }
         }
         currentPlayer = PLAYER_X;
+        movesPlayed = new ArrayList<>();
     }
 
     String showBoard() {
@@ -30,6 +35,13 @@ public class GameBoard {
 
     void switchPlayer() {
         currentPlayer = PLAYER_X.equals(currentPlayer) ? PLAYER_O : PLAYER_X;
+    }
+
+    void placeInputPositionAtBoardGrid(String inputPosition) {
+        if ( "1".equals(inputPosition) ) {
+            movesPlayed.add(inputPosition);
+            grid[INDEX_ZERO][INDEX_ZERO] = currentPlayer;
+        }
     }
 
     public String[][] getGrid() {

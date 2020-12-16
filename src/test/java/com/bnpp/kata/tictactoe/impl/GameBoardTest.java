@@ -72,4 +72,11 @@ class GameBoardTest {
         assertEquals("X", board.getCurrentPlayer());
     }
 
+    @Test
+    @DisplayName("Should place & track player at first position on the board grid")
+    void placeFirstPositionOnBoard() {
+        board.placeInputPositionAtBoardGrid("1");
+        assertEquals("X",board.getGrid()[0][0]);
+    }
+
 }
