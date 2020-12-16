@@ -48,4 +48,12 @@ class TicTacToeTest {
             assertSame("Position is already occupied",exception.getMessage());
         }
     }
+
+    @Test
+    @DisplayName("Should declare winner if any of the winning condition is met")
+    public void declareWinner() throws Exception {
+        System.setIn(new ByteArrayInputStream(("1\n2\n5\n4\n9").getBytes()));
+        ticTacToe.play();
+        assertEquals("X", ticTacToe.getWinner());
+    }
 }
