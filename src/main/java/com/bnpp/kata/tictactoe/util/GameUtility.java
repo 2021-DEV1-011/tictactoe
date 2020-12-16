@@ -37,6 +37,9 @@ public class GameUtility {
         else if (grid[INDEX_ZERO][INDEX_ONE].equals(grid[INDEX_ONE][INDEX_ONE]) && grid[INDEX_ZERO][INDEX_ONE].equals(grid[INDEX_TWO][INDEX_ONE])) {
             winner = grid[INDEX_ZERO][INDEX_ONE];
         }
+        else if (grid[INDEX_ONE][INDEX_ZERO].equals(grid[INDEX_ONE][INDEX_ONE]) && grid[INDEX_ONE][INDEX_ZERO].equals(grid[INDEX_ONE][INDEX_TWO])) {
+            winner = grid[INDEX_ONE][INDEX_ZERO];
+        }
         if ( BLANK_VALUE.equals(winner) )
             winner = null;
         return winner;

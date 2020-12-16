@@ -113,4 +113,17 @@ class GameUtilityTest {
         board.placeInputPositionAtBoardGrid("8");
         assertEquals("X", GameUtility.checkWinner(board.getGrid()));
     }
+
+    @Test
+    @DisplayName("Should declare winner if the middle column of the board is played by same player")
+    void midColumnWinner() {
+        GameBoard board = new GameBoard();
+        assertNull(GameUtility.checkWinner(board.getGrid()));
+        board.placeInputPositionAtBoardGrid("1");
+        board.placeInputPositionAtBoardGrid("8");
+        board.placeInputPositionAtBoardGrid("4");
+        board.placeInputPositionAtBoardGrid("5");
+        board.placeInputPositionAtBoardGrid("6");
+        assertEquals("X", GameUtility.checkWinner(board.getGrid()));
+    }
 }
