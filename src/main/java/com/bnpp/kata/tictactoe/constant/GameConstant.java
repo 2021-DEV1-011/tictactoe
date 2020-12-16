@@ -16,6 +16,7 @@ public class GameConstant {
     public static final String EMPTY_STRING = "";
     public static final String PIPE_VALUE = " | ";
     public static final String PLAYER_X = "X";
+    public static final String PLAYER_O = "O";
 
 
 

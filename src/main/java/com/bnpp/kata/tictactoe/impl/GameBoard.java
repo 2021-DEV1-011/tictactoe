@@ -30,7 +30,7 @@ public class GameBoard {
 
     void switchPlayer() {
         if (PLAYER_X.equals(currentPlayer)) {
-            currentPlayer = "O";
+            currentPlayer = PLAYER_O;
         }
     }
 
