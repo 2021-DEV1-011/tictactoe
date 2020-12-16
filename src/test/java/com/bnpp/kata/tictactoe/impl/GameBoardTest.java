@@ -14,4 +14,11 @@ class GameBoardTest {
         assertEquals("_",board.getGrid()[0][0]);
     }
 
+    @Test
+    @DisplayName("Should initialise second board position with blank value")
+    void secondPositionDefault() {
+        GameBoard board = new GameBoard();
+        assertEquals("_",board.getGrid()[0][1]);
+    }
+
 }
