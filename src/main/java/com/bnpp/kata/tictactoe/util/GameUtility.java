@@ -1,28 +1,11 @@
 package com.bnpp.kata.tictactoe.util;
 
+import java.util.Arrays;
+
 import static com.bnpp.kata.tictactoe.constant.GameConstant.*;
 
 public class GameUtility {
     static boolean isValidInput(String input) {
-        boolean result = false;
-        if ( POSITION_ONE.equals(input) )
-            result = true;
-        else if ( POSITION_TWO.equals(input) )
-            result = true;
-        else if ( POSITION_THREE.equals(input) )
-            result = true;
-        else if ( POSITION_FOUR.equals(input) )
-            result = true;
-        else if ( POSITION_FIVE.equals(input) )
-            result = true;
-        else if ( POSITION_SIX.equals(input) )
-            result = true;
-        else if ( POSITION_SEVEN.equals(input) )
-            result = true;
-        else if ( POSITION_EIGHT.equals(input) )
-            result = true;
-        else if ( POSITION_NINE.equals(input) )
-            result = true;
-        return result;
+        return Arrays.asList(new String[]{POSITION_ONE, POSITION_TWO, POSITION_THREE, POSITION_FOUR, POSITION_FIVE, POSITION_SIX, POSITION_SEVEN, POSITION_EIGHT, POSITION_NINE}).contains(input);
     }
 }
