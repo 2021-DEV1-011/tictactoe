@@ -7,8 +7,7 @@ import com.bnpp.kata.tictactoe.util.GameUtility;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import static com.bnpp.kata.tictactoe.constant.GameConstant.INPUT_MESSAGE;
-import static com.bnpp.kata.tictactoe.constant.GameConstant.INVALID_POSITION_MESSAGE;
+import static com.bnpp.kata.tictactoe.constant.GameConstant.*;
 
 public class TicTacToe {
     private static final Logger logger = Logger.getLogger(TicTacToe.class.getName());
@@ -31,7 +30,7 @@ public class TicTacToe {
                 throw new InvalidInputException(INVALID_POSITION_MESSAGE);
             }
             if (GameUtility.isPositionOccupied(board.getMovesPlayed(), inputPosition)) {
-                throw new PositionAlreadyOccupiedException("Position is already occupied");
+                throw new PositionAlreadyOccupiedException(POSITION_OCCUPIED_MESSAGE);
             }
             board.placeInputPositionAtBoardGrid(inputPosition);
             logger.info(board.showBoard());
