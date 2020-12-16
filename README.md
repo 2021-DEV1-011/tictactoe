@@ -19,3 +19,16 @@ The rules are described below :
 4) If a player is able to draw three X’s or three O’s in a horizontal, vertical or diagonal sequence, that player wins.
 5) If all nine squares are filled and neither player has three in a sequence, the game is a draw.
 ```
+# Set up application in Intellij IDE
+```
+1) Download project as zip file and unzip the same to a folder. 
+2) In Intellij IDE,  Go to the below path
+   File -> New -> Project from Existing Sources -> Next -> 
+   Browse extracted folder and OK ->Import Project from External model -> Maven
+3) IDE will import your maven project 
+```
+# Run application in Intellij IDE
+```
+1. Navigate and open the class src/main/java/com/bnpp/kata/tictactoe/TicTacToeApplication.java
+2. Go to Run -> Run -> TicTacToeApplication or right click on the TicTacToeApplication.java and select "Run TicTacToeApplication.main()"
+```
