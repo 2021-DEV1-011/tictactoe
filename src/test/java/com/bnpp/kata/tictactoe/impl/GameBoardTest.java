@@ -47,4 +47,10 @@ class GameBoardTest {
         String structure = "\n_ | _ | _\n_ | _ | _\n_ | _ | _\n";
         assertEquals(structure,board.showBoard());
     }
+
+    @Test
+    @DisplayName("Should have default player X to start the game")
+    void defaultPlayerOfGame() {
+        assertEquals("X",board.getCurrentPlayer());
+    }
 }

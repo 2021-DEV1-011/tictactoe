@@ -4,6 +4,7 @@ import static com.bnpp.kata.tictactoe.constant.GameConstant.*;
 
 public class GameBoard {
     private String[][] grid;
+    private String currentPlayer;
 
     public GameBoard() {
         grid = new String[ROW_SIZE][COLUMN_SIZE];
@@ -12,6 +13,7 @@ public class GameBoard {
                 grid[row][column] = BLANK_VALUE;
             }
         }
+        currentPlayer = "X";
     }
 
     String showBoard() {
@@ -28,5 +30,9 @@ public class GameBoard {
 
     public String[][] getGrid() {
         return grid;
+    }
+
+    public String getCurrentPlayer() {
+        return currentPlayer;
     }
 }
