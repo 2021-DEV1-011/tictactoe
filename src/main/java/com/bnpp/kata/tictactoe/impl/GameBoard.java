@@ -15,15 +15,15 @@ public class GameBoard {
     }
 
     String showBoard() {
-        String boardValue = NEWLINE_VALUE;
+        StringBuilder boardValue = new StringBuilder(NEWLINE_VALUE);
         for (int row = INDEX_ZERO; row < ROW_SIZE; row++) {
-            String rowValue = EMPTY_STRING;
+            StringBuilder rowValue = new StringBuilder(EMPTY_STRING);
             for (int column = INDEX_ZERO; column < COLUMN_SIZE; column++) {
-                    rowValue += grid[row][column] + (column != INDEX_TWO ? PIPE_VALUE : EMPTY_STRING) ;
+                    rowValue.append(grid[row][column]).append(column != INDEX_TWO ? PIPE_VALUE : EMPTY_STRING);
             }
-            boardValue += rowValue + NEWLINE_VALUE;
+            boardValue.append(rowValue).append(NEWLINE_VALUE);
         }
-        return boardValue;
+        return boardValue.toString();
     }
 
     public String[][] getGrid() {
