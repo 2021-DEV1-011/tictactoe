@@ -76,13 +76,19 @@ class GameBoardTest {
         return Stream.of(
                 arguments("1", 0, 0),
                 arguments("2", 0, 1),
-                arguments("3", 0, 2)
+                arguments("3", 0, 2),
+                arguments("4", 1, 0),
+                arguments("5", 1, 1),
+                arguments("6", 1, 2),
+                arguments("7", 2, 0),
+                arguments("8", 2, 1),
+                arguments("9", 2, 2)
         );
     }
 
     @ParameterizedTest
     @MethodSource("gridInputToBePlaced")
-    @DisplayName("Should place & track player at first, second, third position on the board grid")
+    @DisplayName("Should place & track player at various position on the board grid")
     void placePositionOnBoard(String position,int rowIndex, int columnIndex) {
         board.placeInputPositionAtBoardGrid(position);
         assertEquals("X",board.getGrid()[rowIndex][columnIndex]);

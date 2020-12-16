@@ -38,15 +38,35 @@ public class GameBoard {
     }
 
     void placeInputPositionAtBoardGrid(String inputPosition) {
-        if ( POSITION_ONE.equals(inputPosition) ) {
-            movesPlayed.add(inputPosition);
-            grid[INDEX_ZERO][INDEX_ZERO] = currentPlayer;
-        } else if ( POSITION_TWO.equals(inputPosition) ) {
-            movesPlayed.add(inputPosition);
-            grid[INDEX_ZERO][INDEX_ONE] = currentPlayer;
-        } else if ( POSITION_THREE.equals(inputPosition) ) {
-            movesPlayed.add(inputPosition);
-            grid[INDEX_ZERO][INDEX_TWO] = currentPlayer;
+        movesPlayed.add(inputPosition);
+        switch (inputPosition) {
+            case POSITION_ONE:
+                grid[INDEX_ZERO][INDEX_ZERO] = currentPlayer;
+                break;
+            case POSITION_TWO:
+                grid[INDEX_ZERO][INDEX_ONE] = currentPlayer;
+                break;
+            case POSITION_THREE:
+                grid[INDEX_ZERO][INDEX_TWO] = currentPlayer;
+                break;
+            case "4":
+                grid[INDEX_ONE][INDEX_ZERO] = currentPlayer;
+                break;
+            case "5":
+                grid[INDEX_ONE][INDEX_ONE] = currentPlayer;
+                break;
+            case "6":
+                grid[INDEX_ONE][INDEX_TWO] = currentPlayer;
+                break;
+            case "7":
+                grid[INDEX_TWO][INDEX_ZERO] = currentPlayer;
+                break;
+            case "8":
+                grid[INDEX_TWO][INDEX_ONE] = currentPlayer;
+                break;
+            case "9":
+                grid[INDEX_TWO][INDEX_TWO] = currentPlayer;
+                break;
         }
     }
 
