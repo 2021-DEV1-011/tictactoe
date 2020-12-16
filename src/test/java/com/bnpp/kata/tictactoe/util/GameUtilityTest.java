@@ -41,4 +41,15 @@ class GameUtilityTest {
         board.placeInputPositionAtBoardGrid("3");
         assertEquals("X", GameUtility.checkWinner(board.getGrid()));
     }
+
+    @Test
+    @DisplayName("Should declare winner if the 3rd column of the board is played by same player")
+    void thirdColumnWinner() {
+        GameBoard board = new GameBoard();
+        assertNull(GameUtility.checkWinner(board.getGrid()));
+        board.placeInputPositionAtBoardGrid("3");
+        board.placeInputPositionAtBoardGrid("6");
+        board.placeInputPositionAtBoardGrid("9");
+        assertEquals("X", GameUtility.checkWinner(board.getGrid()));
+    }
 }
