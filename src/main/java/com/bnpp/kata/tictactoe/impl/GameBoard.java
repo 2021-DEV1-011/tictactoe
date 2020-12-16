@@ -19,10 +19,7 @@ public class GameBoard {
         for (int row = INDEX_ZERO; row < ROW_SIZE; row++) {
             String rowValue = EMPTY_STRING;
             for (int column = INDEX_ZERO; column < COLUMN_SIZE; column++) {
-                if ( column != INDEX_TWO )
-                    rowValue += grid[row][column] + PIPE_VALUE ;
-                else
-                    rowValue += grid[row][column] ;
+                    rowValue += grid[row][column] + (column != INDEX_TWO ? PIPE_VALUE : EMPTY_STRING) ;
             }
             boardValue += rowValue + NEWLINE_VALUE;
         }
