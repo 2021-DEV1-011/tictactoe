@@ -53,4 +53,13 @@ class GameBoardTest {
     void defaultPlayerOfGame() {
         assertEquals("X",board.getCurrentPlayer());
     }
+
+    @Test
+    @DisplayName("Should have the next player as O")
+    void nextPlayer() {
+        assertEquals("X", board.getCurrentPlayer());
+        board.switchPlayer();
+        assertEquals("O", board.getCurrentPlayer());
+    }
+
 }

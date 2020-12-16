@@ -28,6 +28,12 @@ public class GameBoard {
         return boardValue.toString();
     }
 
+    void switchPlayer() {
+        if (PLAYER_X.equals(currentPlayer)) {
+            currentPlayer = "O";
+        }
+    }
+
     public String[][] getGrid() {
         return grid;
     }
