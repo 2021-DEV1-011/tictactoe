@@ -14,6 +14,21 @@ public class GameBoard {
         }
     }
 
+    String showBoard() {
+        String boardValue = "\n";
+        for (int row = INDEX_ZERO; row < ROW_SIZE; row++) {
+            String rowValue = "";
+            for (int column = INDEX_ZERO; column < COLUMN_SIZE; column++) {
+                if ( column != INDEX_TWO )
+                    rowValue += grid[row][column] + " | " ;
+                else
+                    rowValue += grid[row][column] ;
+            }
+            boardValue += rowValue + "\n";
+        }
+        return boardValue;
+    }
+
     public String[][] getGrid() {
         return grid;
     }

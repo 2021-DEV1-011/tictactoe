@@ -1,6 +1,7 @@
 package com.bnpp.kata.tictactoe.impl;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -32,5 +33,13 @@ class GameBoardTest {
     void positionDefaultValue(int rowIndex, int columnIndex) {
         GameBoard board = new GameBoard();
         assertEquals("_",board.getGrid()[rowIndex][columnIndex]);
+    }
+
+    @Test
+    @DisplayName("Should display plain board structure")
+    void showBoard() {
+        GameBoard board = new GameBoard();
+        String structure = "\n_ | _ | _\n_ | _ | _\n_ | _ | _\n";
+        assertEquals(structure,board.showBoard());
     }
 }
